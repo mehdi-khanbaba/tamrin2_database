@@ -1,3 +1,11 @@
- .idea/
+# cmd stuff
+.idea/
 
-  tamrin2/
+# virtual env
+tamrin2/
+
+# database
+db.sqlite3
+
+# blig3
+blog3/migrations/
