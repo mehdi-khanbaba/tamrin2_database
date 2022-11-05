@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  tamrin2_postgresql:
+    image: postgres:12
+    container_name: tamrin2_postgresql
+    volumes:
+      - tamrin2_postgresql:/var/lib/postgresql/data
+    restart: always
+    env_file: .env
+    ports:
+        - "5051:5051"
+    networks:
+        - tamrin_network
+
+volumes:
+  tamrin2_postgresql:
+    external: true
+networks:
+  tamrin_network:
+    external: true
